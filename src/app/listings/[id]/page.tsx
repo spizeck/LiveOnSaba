@@ -210,7 +210,7 @@ export default function ListingDetailPage() {
                   <button
                     key={index}
                     onClick={() => setCurrentPhotoIndex(index)}
-                    className={`flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden border-2 transition-colors ${
+                    className={`shrink-0 w-20 h-20 rounded-lg overflow-hidden border-2 transition-colors ${
                       index === currentPhotoIndex
                         ? "border-primary dark:border-primary-dark"
                         : "border-transparent"

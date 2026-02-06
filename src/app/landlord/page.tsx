@@ -272,7 +272,7 @@ export default function LandlordPortalPage() {
                   >
                     <div className="flex flex-col sm:flex-row gap-4">
                       {/* Thumbnail */}
-                      <div className="w-full sm:w-32 h-24 rounded-lg overflow-hidden bg-gray-200 dark:bg-gray-700 flex-shrink-0">
+                      <div className="w-full sm:w-32 h-24 rounded-lg overflow-hidden bg-gray-200 dark:bg-gray-700 shrink-0">
                         {listing.photos?.[listing.primaryPhotoIndex || 0] ? (
                           <img
                             src={listing.photos[listing.primaryPhotoIndex || 0]}

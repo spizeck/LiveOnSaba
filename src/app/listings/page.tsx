@@ -341,7 +341,7 @@ export default function ListingsPage() {
                 className="group bg-surface-light dark:bg-surface-dark rounded-lg overflow-hidden border border-gray-200 dark:border-gray-800 hover:shadow-lg transition-shadow"
               >
                 {/* Image */}
-                <div className="relative aspect-[4/3] bg-gray-200 dark:bg-gray-700">
+                <div className="relative aspect-4/3 bg-gray-200 dark:bg-gray-700">
                   {listing.photos?.[listing.primaryPhotoIndex || 0] ? (
                     <img
                       src={listing.photos[listing.primaryPhotoIndex || 0]}
