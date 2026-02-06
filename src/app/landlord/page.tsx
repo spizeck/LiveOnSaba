@@ -149,13 +149,22 @@ export default function LandlordPortalPage() {
               Manage your rental listings
             </p>
           </div>
-          <Link
-            href="/landlord/listings/new"
-            className="inline-flex items-center gap-2 px-4 py-2 bg-primary dark:bg-primary-dark text-white rounded-lg hover:bg-primary/90 dark:hover:bg-primary-dark/90 transition-colors"
-          >
-            <Plus className="h-5 w-5" />
-            Add Listing
-          </Link>
+          <div className="flex gap-3">
+            <Link
+              href="/landlord/inquiries"
+              className="inline-flex items-center gap-2 px-4 py-2 border border-gray-300 dark:border-gray-700 text-text-primary-light dark:text-text-primary-dark rounded-lg hover:bg-background-light dark:hover:bg-background-dark transition-colors"
+            >
+              <MessageSquare className="h-5 w-5" />
+              Inquiries
+            </Link>
+            <Link
+              href="/landlord/listings/new"
+              className="inline-flex items-center gap-2 px-4 py-2 bg-primary dark:bg-primary-dark text-white rounded-lg hover:bg-primary/90 dark:hover:bg-primary-dark/90 transition-colors"
+            >
+              <Plus className="h-5 w-5" />
+              Add Listing
+            </Link>
+          </div>
         </div>
 
         {/* Stats */}

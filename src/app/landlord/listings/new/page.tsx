@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { useAuth } from "@/components/providers/AuthProvider";
+import { useToast } from "@/components/ui/Toast";
 import {
   Loader2,
   ArrowLeft,
@@ -41,6 +42,7 @@ const AREAS: { value: Area; label: string }[] = [
 export default function NewListingPage() {
   const router = useRouter();
   const { user, userData, loading: authLoading } = useAuth();
+  const { showToast } = useToast();
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState("");
 
@@ -114,6 +116,7 @@ export default function NewListingPage() {
         throw new Error(data.error || "Failed to create listing");
       }
 
+      showToast("success", "Listing created successfully!");
       router.push("/landlord");
     } catch (err: any) {
       setError(err.message);

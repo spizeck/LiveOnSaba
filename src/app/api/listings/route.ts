@@ -34,9 +34,7 @@ export async function GET(request: NextRequest) {
     }
 
     // Execute query
-    console.log("Executing listings query with status:", status);
     const snapshot = await query.orderBy("createdAt", "desc").get();
-    console.log("Query returned", snapshot.docs.length, "documents");
 
     // Filter results in memory (for price, bedrooms, and suspended landlords)
     const listings = snapshot.docs

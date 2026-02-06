@@ -141,13 +141,14 @@ export interface Inquiry {
   id: string;
   listingId: string;
   landlordId: string;
-  senderName: string;
-  senderEmail: string;
-  senderPhone?: string;
+  userId?: string; // null for unauthenticated users
+  name: string;
+  email: string;
+  phone?: string;
   message: string;
-  read: boolean;
-  readAt?: Timestamp;
+  status: "pending" | "replied" | "closed";
   createdAt: Timestamp;
+  updatedAt: Timestamp;
 }
 
 export type AdminActionType =
@@ -159,13 +160,3 @@ export type AdminActionType =
   | "listing-featured"
   | "listing-edited"
   | "user-edited";
-
-export interface AdminAction {
-  id: string;
-  adminId: string;
-  actionType: AdminActionType;
-  targetId: string;
-  targetType: "user" | "landlord" | "listing" | "review";
-  notes?: string;
-  timestamp: Timestamp;
-}

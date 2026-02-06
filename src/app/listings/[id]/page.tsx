@@ -26,6 +26,7 @@ import {
   Check,
   X as XIcon,
 } from "lucide-react";
+import InquiryForm from "@/components/forms/InquiryForm";
 
 const AREAS: Record<string, string> = {
   windwardside: "Windwardside",
@@ -65,6 +66,7 @@ export default function ListingDetailPage() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [currentPhotoIndex, setCurrentPhotoIndex] = useState(0);
+  const [inquirySent, setInquirySent] = useState(false);
 
   useEffect(() => {
     async function fetchListing() {
@@ -509,11 +511,13 @@ export default function ListingDetailPage() {
                 </div>
               )}
 
-              {/* Contact Button */}
-              {listing.contactFormEnabled && (
-                <button className="w-full py-3 px-4 bg-primary dark:bg-primary-dark text-white font-semibold rounded-lg hover:bg-primary/90 dark:hover:bg-primary-dark/90 transition-colors">
-                  Contact Landlord
-                </button>
+              {/* Inquiry Form */}
+              {listing.contactFormEnabled && !inquirySent && (
+                <InquiryForm
+                  listingId={listing.id}
+                  listingTitle={listing.title}
+                  onSuccess={() => setInquirySent(true)}
+                />
               )}
 
               <p className="mt-4 text-xs text-center text-text-secondary-light dark:text-text-secondary-dark">

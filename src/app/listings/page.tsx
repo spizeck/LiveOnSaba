@@ -86,7 +86,7 @@ export default function ListingsPage() {
 
   useEffect(() => {
     fetchListings();
-  }, []);
+  }, [area, minPrice, maxPrice, minBedrooms]);
 
   const handleApplyFilters = () => {
     fetchListings();
@@ -148,7 +148,7 @@ export default function ListingsPage() {
               <select
                 value={minBedrooms}
                 onChange={(e) => setMinBedrooms(e.target.value)}
-                className="w-32 px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-text-primary-light dark:text-text-primary-dark focus:ring-2 focus:ring-primary dark:focus:ring-primary-dark focus:border-transparent outline-none"
+                className="w-36 px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-text-primary-light dark:text-text-primary-dark focus:ring-2 focus:ring-primary dark:focus:ring-primary-dark focus:border-transparent outline-none"
               >
                 <option value="">Bedrooms</option>
                 {BEDROOM_OPTIONS.map((opt) => (

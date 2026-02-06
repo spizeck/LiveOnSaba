@@ -10,14 +10,17 @@ A rental listing platform for Saba, Dutch Caribbean.
 - **Landlord Application** - Apply form with duplicate prevention, status tracking
 - **Admin Dashboard** - Landlord management with approve/reject/suspend tabs
 - **Mock Data Seeding** - Script to populate test data (`npm run seed`)
+- **Listings Browse Page** - `/listings` with area, price, and bedroom filters
+- **Listing Detail Page** - `/listings/[id]` with photo gallery and full property info
+- **Landlord Portal** - `/landlord` dashboard showing listings with stats
+- **Create Listing Form** - `/landlord/listings/new` for landlords to add properties
+- **Inquiry/Contact System** - Contact form on listing pages, landlord inquiry management
 
 ### 🚧 In Progress
-- Listings browse page
-- Listing detail page
+- None
 
 ### 📋 Upcoming
-- Landlord portal (manage listings, create/edit)
-- Inquiry/contact system
+- Edit listing form (`/landlord/listings/[id]/edit`)
 - User dashboard (saved listings, searches)
 - Review system
 - Email notifications
