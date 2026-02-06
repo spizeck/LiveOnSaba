@@ -62,6 +62,9 @@ export interface Landlord {
   approved: boolean;
   approvedAt?: Timestamp;
   approvedBy?: string;
+  suspended?: boolean;
+  suspendedAt?: Timestamp;
+  suspendedBy?: string;
   applicationDate: Timestamp;
   profileDescription?: string;
   profilePhoto?: string;
