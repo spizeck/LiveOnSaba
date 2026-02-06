@@ -8,7 +8,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "seed": "npx ts-node --project scripts/tsconfig.json scripts/seed-mock-data.ts"
   },
   "keywords": [
     "rental",
@@ -21,6 +22,7 @@
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",
     "clsx": "^2.1.1",
+    "dotenv": "^17.2.4",
     "firebase": "^12.7.0",
     "firebase-admin": "^13.6.0",
     "lucide-react": "^0.562.0",
@@ -42,6 +44,7 @@
     "eslint-config-next": "^16.1.1",
     "postcss": "^8.5.6",
     "tailwindcss": "^4.1.18",
+    "ts-node": "^10.9.2",
     "typescript": "^5.9.3"
   }
 }

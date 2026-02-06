@@ -2,6 +2,26 @@
 
 A rental listing platform for Saba, Dutch Caribbean.
 
+## Development Progress
+
+### ✅ Completed
+- **Authentication System** - Sign in, sign up, forgot password, Google OAuth, session cookies
+- **Dark Mode** - Tailwind v4 class-based theme switching
+- **Landlord Application** - Apply form with duplicate prevention, status tracking
+- **Admin Dashboard** - Landlord management with approve/reject/suspend tabs
+- **Mock Data Seeding** - Script to populate test data (`npm run seed`)
+
+### 🚧 In Progress
+- Listings browse page
+- Listing detail page
+
+### 📋 Upcoming
+- Landlord portal (manage listings, create/edit)
+- Inquiry/contact system
+- User dashboard (saved listings, searches)
+- Review system
+- Email notifications
+
 ## Getting Started
 
 ### Prerequisites
@@ -76,6 +96,7 @@ src/
 - `npm run build` - Build for production
 - `npm run start` - Start production server
 - `npm run lint` - Run ESLint
+- `npm run seed` - Seed mock data to Firestore
 
 ## Environment Variables
 
